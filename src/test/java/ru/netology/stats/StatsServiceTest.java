@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
-    @org.junit.jupiter.api.Test
-    void salesTotal() {
+    @Test
+    void shouldCalculateSalesTotal() {
         {
             StatsService service = new StatsService();
 
@@ -24,7 +24,7 @@ class StatsServiceTest {
     }
 
     @Test
-    void salesAverage() {
+    void shouldCalculateSalesAverage() {
         StatsService service = new StatsService();
 
         // подготавливаем данные:
