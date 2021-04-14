@@ -58,9 +58,8 @@ public class StatsService {
         int average = service.salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
-            if (sale > average) {
+            if (sale > average)
                 month ++;
-            }
         }
         return month;
     }
@@ -71,9 +70,8 @@ public class StatsService {
         int average = service.salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
-            if (sale < average) {
-                month ++;
-            }
+            if (sale < average)
+                month++;
         }
         return month;
     }
