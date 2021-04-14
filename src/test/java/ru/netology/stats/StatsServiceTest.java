@@ -9,14 +9,13 @@ class StatsServiceTest {
     @Test
     void shouldCalculateSalesTotal() {
         {
-            StatsService service = new StatsService();
 
             // подготавливаем данные:
             int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
             int expected = 180;
 
             // вызываем целевой метод:
-            int actual = service.salesTotal(sales);
+            int actual = StatsService.salesTotal(sales);
 
             // производим проверку (сравниваем ожидаемый и фактический):
             assertEquals(expected, actual);
@@ -25,14 +24,14 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateSalesAverage() {
-        StatsService service = new StatsService();
+        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 15;
 
         // вызываем целевой метод:
-        int actual = service.salesAverage(sales);
+        double actual = StatsService.salesAverage(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
@@ -40,14 +39,14 @@ class StatsServiceTest {
 
     @Test
     void shouldFindHighestSalesMonth() {
-        StatsService service = new StatsService();
+        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 8;
 
         // вызываем целевой метод:
-        int actual = service.highestSalesMonth(sales);
+        int actual = StatsService.highestSalesMonth(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
@@ -55,14 +54,14 @@ class StatsServiceTest {
 
     @Test
     void shouldFindLowestSalesMonth() {
-        StatsService service = new StatsService();
+        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
 
         // вызываем целевой метод:
-        int actual = service.lowestSalesMonth(sales);
+        int actual = StatsService.lowestSalesMonth(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
@@ -70,29 +69,29 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateAboveAverageSalesMonths() {
-        StatsService service = new StatsService();
+        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
 
         // вызываем целевой метод:
-        int actual = service.aboveAverageSalesMonths(sales);
+        int actual = StatsService.aboveAverageSalesMonths(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
     @Test
-    void underAverageSalesMonths() {
-        StatsService service = new StatsService();
+    void shouldCalculateUnderAverageSalesMonths() {
+        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18, };
         int expected = 5;
 
         // вызываем целевой метод:
-        int actual = service.underAverageSalesMonths(sales);
+        int actual = StatsService.underAverageSalesMonths(sales);
 
         // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);

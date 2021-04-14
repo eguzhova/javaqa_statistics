@@ -13,13 +13,7 @@ public class StatsService {
 
     //Метод расчета среднего значения продаж за все месяцы
     public static int salesAverage(int[] sales) {
-        int total = 0;
-        int month = 0;
-        for (int sale : sales) {
-            total += sale;
-            month++;
-        }
-        return total / month;
+        return StatsService.salesTotal(sales)/ sales.length;
     }
 
     //Метод нахождения месяца с пиком продаж
@@ -54,8 +48,7 @@ public class StatsService {
 
     //Метод вычисления количества месяцев с продажами выше среднего
     public static int aboveAverageSalesMonths(int[] sales) {
-        StatsService service = new StatsService();
-        int average = service.salesAverage (sales);
+        int average = StatsService.salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
             if (sale > average)
@@ -66,8 +59,7 @@ public class StatsService {
 
     //Метод вычисления количества месяцев с продажами ниже среднего
     public static int underAverageSalesMonths (int[] sales) {
-        StatsService service = new StatsService();
-        int average = service.salesAverage (sales);
+        int average = StatsService.salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
             if (sale < average)
