@@ -3,7 +3,7 @@ package ru.netology.stats;
 public class StatsService {
 
     //Метод рассчета суммы продаж за все месяцы
-    public static int salesTotal(int[] sales) {
+    public int salesTotal(int[] sales) {
         int total = 0;
         for (int sale : sales) {
             total += sale;
@@ -12,12 +12,12 @@ public class StatsService {
     }
 
     //Метод расчета среднего значения продаж за все месяцы
-    public static int salesAverage(int[] sales) {
-        return StatsService.salesTotal(sales)/ sales.length;
+    public int salesAverage(int[] sales) {
+        return salesTotal(sales)/ sales.length;
     }
 
     //Метод нахождения месяца с пиком продаж
-    public static int highestSalesMonth(int[] sales) {
+    public int highestSalesMonth(int[] sales) {
         int month = 0;
         int monthCount = 0;
         int highestSale = sales[1];
@@ -32,7 +32,7 @@ public class StatsService {
     }
 
     //Метод нахождения месяца с наименьшими продажами
-    public static int lowestSalesMonth(int[] sales) {
+    public int lowestSalesMonth(int[] sales) {
         int month = 0;
         int monthCount = 0;
         int lowestSale = sales[1];
@@ -47,8 +47,8 @@ public class StatsService {
     }
 
     //Метод вычисления количества месяцев с продажами выше среднего
-    public static int aboveAverageSalesMonths(int[] sales) {
-        int average = StatsService.salesAverage (sales);
+    public int aboveAverageSalesMonths(int[] sales) {
+        int average = salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
             if (sale > average)
@@ -58,8 +58,8 @@ public class StatsService {
     }
 
     //Метод вычисления количества месяцев с продажами ниже среднего
-    public static int underAverageSalesMonths (int[] sales) {
-        int average = StatsService.salesAverage (sales);
+    public int underAverageSalesMonths (int[] sales) {
+        int average = salesAverage (sales);
         int month = 0;
         for (int sale : sales) {
             if (sale < average)
