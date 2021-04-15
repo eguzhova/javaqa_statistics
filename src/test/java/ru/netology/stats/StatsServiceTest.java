@@ -9,7 +9,6 @@ class StatsServiceTest {
     @Test
     void shouldCalculateSalesTotal() {
         {
-
             // подготавливаем данные:
             int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
             int expected = 180;
@@ -24,7 +23,6 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateSalesAverage() {
-        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -39,7 +37,6 @@ class StatsServiceTest {
 
     @Test
     void shouldFindHighestSalesMonth() {
-        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -54,7 +51,6 @@ class StatsServiceTest {
 
     @Test
     void shouldFindLowestSalesMonth() {
-        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -69,7 +65,6 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateAboveAverageSalesMonths() {
-        //StatsService service = new StatsService();
 
         // подготавливаем данные:
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -84,10 +79,9 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateUnderAverageSalesMonths() {
-        //StatsService service = new StatsService();
 
         // подготавливаем данные:
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18, };
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18,};
         int expected = 5;
 
         // вызываем целевой метод:

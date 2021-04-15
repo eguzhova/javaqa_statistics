@@ -20,12 +20,12 @@ public class StatsService {
     public static int highestSalesMonth(int[] sales) {
         int month = 0;
         int monthCount = 0;
-        int previousSale = sales[1];
+        int highestSale = sales[1];
         for (int sale : sales) {
             monthCount++;
-            if (previousSale <= sale) {
+            if (highestSale <= sale) {
                 month = monthCount;
-                previousSale = sale;
+                highestSale = sale;
             }
         }
         return month;
@@ -35,12 +35,12 @@ public class StatsService {
     public static int lowestSalesMonth(int[] sales) {
         int month = 0;
         int monthCount = 0;
-        int previousSale = sales[1];
+        int lowestSale = sales[1];
         for (int sale : sales) {
             monthCount++;
-            if (previousSale >= sale) {
+            if (lowestSale >= sale) {
                 month = monthCount;
-                previousSale = sale;
+                lowestSale = sale;
             }
         }
         return month;
